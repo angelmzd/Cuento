@@ -1,10 +1,14 @@
 <!doctype html>
 <html>
 <head>
-	<style type="text/css">body {
+	<style type="text/css">
+body {
   background-color:black;
   margin: 0;
   padding: 0;
+}
+#image {
+  display: none;
 }
 	</style>
 	<title>HTML Editor - Full Version</title>
@@ -12,9 +16,14 @@
 <body>
 <script>
   function play(){
+       document.getElementById('image')
+               .style.display = "block"; 
+       document.getElementById('image')
+               .style.margin = " 0 auto";
        var audio = document.getElementById("audio");
        audio.play();
-                 }
+	   setTimeout(function(){document.getElementById('image').style.display = "none";},3000);
+    };
 </script>
 <table align="center" border="0" cellpadding="0" cellspacing="0" style="height:100%;width:100%;">
 	<tbody>
@@ -24,6 +33,12 @@
 			<audio id="audio" src="Bio-Bot03.mp3" ></audio>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align: center">
+			<div style="height: 150px; overflow:hidden;">
+			<img id="image" src="alexa-2.gif">
+			</td>
+		</tr>		
 	</tbody>
 </table>
 
